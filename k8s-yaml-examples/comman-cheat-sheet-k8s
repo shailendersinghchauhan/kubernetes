@@ -1,0 +1,10 @@
+kubectl apply -f ./curlpod.yaml
+
+kubectl get pods -l app=curlpod
+
+
+kubectl get svc my-nginx -o yaml | grep nodePort -C 5
+
+kubectl get nodes -o yaml | grep ExternalIP -C 1
+
+kubectl describe service my-nginx
